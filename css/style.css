@@ -1,9 +1,9 @@
-/*Font Setting*/
+/*Add a backup font "sans-serif"*/
 body{
     font-family: "Poppins", sans-serif;
 }
 
-/*Use flexbox to style each of the following areas: header, .nav_links, .pricing, .gallery */
+/*flexbox to style each of the following areas: header, .nav_links, .pricing, .gallery*/
 header,
 .nav_links,
 .pricing,
@@ -25,18 +25,19 @@ header img {
     text-align: center;
     justify-content: center;
     flex-direction: column;
-    flex-wrap: wrap;
 }
 
 /*Cards should be full width and stacked*/
 .card{
     width: 100%;
-    flex-wrap: wrap;
 }
 /*Images should be full width and stacked*/
 img{
     width: 100%;
-    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    padding-left: 0;
 }
 
 @keyframes fadeIn {
@@ -46,6 +47,8 @@ img{
 
 
 #logo{
+    width: 100%;
+    height: auto;
     /*The logo image in the header fades in over 3 seconds*/
     animation: fadeIn 3s;
 }
@@ -64,8 +67,7 @@ img{
     /*Header image is 400px width (auto height)*/
     header img{
         width: 400px;
-        height: auto;
-        justify-content: flex-start;
+        /*height: auto;*/
     }
 
     header{
@@ -74,7 +76,6 @@ img{
 
     .nav_links {
         flex-direction: row;
-        justify-content: flex-end;
     }
 
     /*card should be stacked*/
