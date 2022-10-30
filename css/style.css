@@ -1,5 +1,5 @@
 /*Font Setting*/
-html, body{
+body{
     font-family: "Poppins", sans-serif;
 }
 
@@ -9,6 +9,8 @@ header,
 .pricing,
 .gallery {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 /*Header image should be full width (auto height)*/
@@ -19,21 +21,23 @@ header img {
 
 /*Navigation links should be centered and stacked*/
 .nav_links {
+    display: flex;
     text-align: center;
     justify-content: center;
     flex-direction: column;
-    flex-wrap: wrap;
 }
 
 /*Cards should be full width and stacked*/
-.card {
+.card{
     width: 100%;
-    flex-wrap: wrap;
 }
 /*Images should be full width and stacked*/
-img {
+img{
     width: 100%;
-    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    padding-left: 0;
 }
 
 
@@ -42,7 +46,7 @@ img {
     /*Header image is 400px width (auto height)*/
     header img{
         width: 400px;
-        height: auto;
+        /*height: auto;*/
     }
 
     header{
@@ -77,6 +81,8 @@ img {
 
 
 #logo{
+    width: 100%;
+    height: auto;
     /*The logo image in the header fades in over 3 seconds*/
     animation: fadeIn 3s;
 }
@@ -88,4 +94,3 @@ img {
         animation: none;
     }
 }
-
