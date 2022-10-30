@@ -4,7 +4,7 @@ body{
 }
 
 /*Use flexbox to style each of the following areas: header, .nav_links, .pricing, .gallery */
-.header,
+header,
 .nav_links,
 .pricing,
 .gallery {
