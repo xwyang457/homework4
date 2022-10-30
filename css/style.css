@@ -3,7 +3,7 @@ body{
     font-family: "Poppins", sans-serif;
 }
 
-/*Use flexbox to style each of the following areas: header, .nav_links, .pricing, .gallery*/
+/* Use flexbox to style each of the following areas: header, .nav_links, .pricing, .gallery*/
 header,
 .nav_links,
 .pricing,
@@ -30,7 +30,6 @@ header img {
 /*Cards should be full width and stacked*/
 .card{
     width: 100%;
-    flex-wrap: wrap;
 }
 /*Images should be full width and stacked*/
 img{
@@ -39,45 +38,6 @@ img{
     justify-content: center;
     text-align: left;
     padding-left: 0;
-    flex-wrap: wrap;
-}
-
-
-/*Media query at min-width: 700px*/
-@media screen and (min-width: 700px){
-    /*Header image is 400px width (auto height)*/
-    header img{
-        width: 400px;
-        height: auto;
-        justify-content: flex-start;
-    }
-
-    header{
-        justify-content: space-between;
-    }
-
-    .nav_links {
-        flex-direction: row;
-        justify-content: flex-end;
-        align-content: center;
-
-    }
-
-    /*card should be stacked*/
-    .pricing{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    /*Cards should be 300px wide, and be lined up (as many as there are space for on a row)*/
-    .card{
-        width: 300px;
-        justify-content: left;
-    }
-    /*Images should be 300px wide, and be lined up (as many as there are space for on a row)*/
-    .gallery img{
-        width: 300px;
-    }
 }
 
 @keyframes fadeIn {
@@ -96,5 +56,41 @@ img{
 @media screen and (prefers-reduced-motion) {
     #logo {
         animation: none;
+    }
+}
+
+
+/*Media query at min-width: 700px*/
+@media screen and (min-width: 700px){
+    /*Header image is 400px width (auto height)*/
+    header img{
+        width: 400px;
+        height: auto;
+        align-items: flex-start;
+    }
+
+    header{
+        justify-content: space-between;
+    }
+
+    .nav_links {
+        flex-direction: row;
+        align-items: flex-end;
+    }
+
+    /*card should be stacked*/
+    .pricing{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    /*Cards should be 300px wide, and be lined up (as many as there are space for on a row)*/
+    .card{
+        width: 300px;
+        justify-content: left;
+    }
+    /*Images should be 300px wide, and be lined up (as many as there are space for on a row)*/
+    .gallery img{
+        width: 300px;
     }
 }
