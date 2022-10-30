@@ -6,7 +6,6 @@ html, body{
 /* Header Section*/
 header {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
     align-items : center;
 }
@@ -26,9 +25,7 @@ header img {
 /*.Pricing Section*/
 .pricing {
     display : flex;
-    flex-wrap : wrap;
-    align-items : stretch;
-    justify-content : center;
+    flex-direction: column;
 }
 
 .card{
@@ -37,9 +34,8 @@ header img {
 
 /*.Gallery Section*/
 .gallery {
-    display : flex;
-    flex-wrap : wrap;
-    justify-content : center;
+    display: flex;
+    flex-direction: column;
 }
 
 .gallery img{
@@ -66,10 +62,21 @@ header img {
 
     /*Cards should be 300px wide, and be lined up (as many as there are space for on a row)*/
 
+    .pricing {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
     .card{
         width: 300px;
     }
     /*Images should be 300px wide, and be lined up (as many as there are space for on a row)*/
+    .gallery {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 
     .gallery img{
         width: 300px;
