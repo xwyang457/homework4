@@ -30,6 +30,7 @@ header img {
 /*Cards should be full width and stacked*/
 .card{
     width: 100%;
+    flex-wrap: wrap;
 }
 /*Images should be full width and stacked*/
 img{
@@ -38,6 +39,7 @@ img{
     justify-content: center;
     text-align: left;
     padding-left: 0;
+    flex-wrap: wrap;
 }
 
 
