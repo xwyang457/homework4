@@ -21,6 +21,14 @@ header img {
     flex-direction: column;
 }
 
+.card{
+    width: 100%;
+}
+
+.gallery img{
+    width: 100%;
+}
+
 /*Media query at min-width: 700px*/
 @media screen and (min-width: 700px){
     /*Header image is 400px width (auto height)*/
@@ -36,7 +44,6 @@ header img {
     header {
         flex-direction: row;
         justify-content: space-between;
-
     }
 
     /*Cards should be 300px wide, and be lined up (as many as there are space for on a row)*/
