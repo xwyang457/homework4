@@ -42,7 +42,6 @@ header img {
     }
 
     header {
-        flex-direction: row;
         justify-content: space-between;
 
     }
