@@ -71,10 +71,6 @@ img{
         justify-content: left;
     }
 
-    header{
-        justify-content: space-between;
-    }
-
     .nav_links {
         flex-direction: row;
         justify-content: right;
