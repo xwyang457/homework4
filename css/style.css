@@ -31,7 +31,7 @@ header img {
     flex-wrap: wrap;
 }
 /*Images should be full width and stacked*/
-img{
+.gallery img{
     width: 100%;
     flex-wrap: wrap;
 }
