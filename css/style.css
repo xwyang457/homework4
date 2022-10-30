@@ -81,8 +81,6 @@ img{
 
 
 #logo{
-    width: 100%;
-    height: auto;
     /*The logo image in the header fades in over 3 seconds*/
     animation: fadeIn 3s;
 }
