@@ -67,7 +67,8 @@ img{
     /*Header image is 400px width (auto height)*/
     header img{
         width: 400px;
-        /*height: auto;*/
+        height: auto;
+        justify-content: flex-start;
     }
 
     header{
@@ -76,6 +77,7 @@ img{
 
     .nav_links {
         flex-direction: row;
+        justify-content: flex-end;
     }
 
     /*card should be stacked*/
