@@ -3,32 +3,45 @@ html, body{
     font-family: "Poppins", sans-serif;
 }
 
-/* Use flexbox to style each of the following areas: header, .nav_links, .pricing, .gallery*/
-header,
-.nav_links,
-.pricing,
-.gallery {
+/* Header Section*/
+header {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    align-items : center;
 }
 
-/*Header image should be full width (auto height)*/
+/*Header Image Section*/
 header img {
     width: 100%;
     height: auto;
 }
 
-/*Navigation links should be centered and stacked*/
+/*Navigation Section*/
 .nav_links {
+    display: flex;
     flex-direction: column;
 }
 
-/*Cards should be full width and stacked*/
+/*.Pricing Section*/
+.pricing {
+    display : flex;
+    flex-wrap : wrap;
+    align-items : stretch;
+    justify-content : center;
+}
+
 .card{
     width: 100%;
 }
-/*Images should be full width and stacked*/
+
+/*.Gallery Section*/
+.gallery {
+    display : flex;
+    flex-wrap : wrap;
+    justify-content : center;
+}
+
 .gallery img{
     width: 100%;
 }
@@ -52,21 +65,11 @@ header img {
     }
 
     /*Cards should be 300px wide, and be lined up (as many as there are space for on a row)*/
-    .pricing {
-        flex-direction : row;
-        flex-wrap : wrap;
-        justify-content : center;
-        }
 
     .card{
         width: 300px;
     }
     /*Images should be 300px wide, and be lined up (as many as there are space for on a row)*/
-    .gallery {
-        flex-direction : row;
-        flex-wrap : wrap;
-        justify-content : center;
-        }
 
     .gallery img{
         width: 300px;
