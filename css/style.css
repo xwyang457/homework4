@@ -1,72 +1,73 @@
-html {
-font-family : 'Poppins', sans-serif;
+html, body {
+    font-family: 'Poppins', sans-serif;
 }
 header {
-display : flex;
-flex-direction : column;
-align-items : center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 header img {
-width : 100%;
-height : auto;
-}
-header #logo {
-animation : fades 3s linear forwards;
-}
-@keyframes fades {
-from {
-opacity : 0;
-}
-to {
-opacity : 1;
-}
+    width: 100%;
+    height: auto;
 }
 
 .nav_links {
-display : flex;
-flex-direction : column;
+    display: flex;
+    flex-direction: column;
 }
 
 .pricing {
-display : flex;
-flex-direction : column;
+    display: flex;
+    flex-direction: column;
 }
 .gallery {
-display : flex;
-flex-direction : column;
+    display: flex;
+    flex-direction: column;
+}
+.card, .gallery img {
+    width: 100%;
 }
 
 @media all and (min-width: 700px) {
-header {
-flex-direction : row;
-justify-content : space-between;
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    header img {
+        width: 400px;
+        height: auto;
+    }
+    .nav_links {
+        flex-direction: row;
+    }
+    .pricing {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .card {
+        width : 300px;
+    }
+    .gallery {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .gallery img {
+        width : 300px;
+    }
 }
-header img {
-width : 400px;
-height : auto;
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
-.nav_links {
-flex-direction : row;
+
+#logo{
+    animation: fadeIn 3s;
 }
-.pricing {
-flex-direction : row;
-flex-wrap : wrap;
-justify-content : center;
-}
-.card {
-width : 300px;
-}
-.gallery {
-flex-direction : row;
-flex-wrap : wrap;
-justify-content : center;
-}
-.gallery img {
-width : 300px;
-}
-}
-@media (prefers-reduced-motion) {
-header #logo {
-animation : none;
-}
+
+@media screen and (prefers-reduced-motion) {
+    #logo {
+        animation: none;
+    }
 }
