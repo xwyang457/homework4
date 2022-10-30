@@ -3,10 +3,8 @@ html, body{
     font-family: "Poppins", sans-serif;
 }
 
-header,
-.nav_links,
-.pricing,
-.gallery {
+/*Header Section*/
+header {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -17,22 +15,46 @@ header img {
     height: auto;
 }
 
+/* Navigation Section*/
 .nav_links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     flex-direction: column;
 }
 
-.card{
+/* Pricing Section*/
+.pricing {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.card {
     width: 100%;
 }
 
-.gallery img{
+/* Gallery Section*/
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.gallery img {
     width: 100%;
 }
 
-/*Media query at min-width: 700px*/
+/* Desktop View*/
 @media screen and (min-width: 700px){
-    /*Header image is 400px width (auto height)*/
-    header img{
+
+    header {
+        justify-content: space-between;
+    }
+
+    header img {
         width: 400px;
         height: auto;
     }
@@ -41,35 +63,28 @@ header img {
         flex-direction: row;
     }
 
-    header {
-        justify-content: space-between;
-
-    }
-
-    /*Cards should be 300px wide, and be lined up (as many as there are space for on a row)*/
-
-    .card{
+    .card {
         width: 300px;
         flex-direction: row;
     }
-    /*Images should be 300px wide, and be lined up (as many as there are space for on a row)*/
-    .gallery img{
+
+    .gallery img {
         width: 300px;
         flex-direction: row;
     }
+
 }
 
+/* Animation Section*/
 @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
 }
 
-
 #logo{
     /*The logo image in the header fades in over 3 seconds*/
     animation: fadeIn 3s;
 }
-
 
 /*If the user has set prefers reduced motion, the animation should not run*/
 @media screen and (prefers-reduced-motion) {
