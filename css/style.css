@@ -1,5 +1,5 @@
 /*Font Setting*/
-body{
+html, body{
     font-family: "Poppins", sans-serif;
 }
 
@@ -21,7 +21,6 @@ header img {
 
 /*Navigation links should be centered and stacked*/
 .nav_links {
-    justify-content: center;
     flex-direction: column;
 }
 
@@ -42,24 +41,27 @@ header img {
     header img{
         width: 400px;
         height: auto;
-        flex-direction: row;
-        align-items: flex-start;
+        justify-self: flex-start;
     }
 
     .nav_links {
         flex-direction: row;
-        align-items: flex-end;
+    }
+
+    header {
+        justify-content: space-between;
+
     }
 
     /*Cards should be 300px wide, and be lined up (as many as there are space for on a row)*/
     .card{
         width: 300px;
-        flex-wrap: wrap;
+        flex-direction: row;
     }
     /*Images should be 300px wide, and be lined up (as many as there are space for on a row)*/
     .gallery img{
         width: 300px;
-        flex-wrap: wrap;
+        flex-direction: row;
     }
 }
 
