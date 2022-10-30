@@ -57,6 +57,7 @@ img{
     .nav_links {
         flex-direction: row;
         justify-content: flex-end;
+        align-items: center;
 
     }
 
