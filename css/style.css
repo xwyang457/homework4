@@ -44,28 +44,19 @@ header img {
     header {
         flex-direction: row;
         justify-content: space-between;
+
     }
 
     /*Cards should be 300px wide, and be lined up (as many as there are space for on a row)*/
 
-    .pricing {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
     .card{
         width: 300px;
+        flex-direction: row;
     }
     /*Images should be 300px wide, and be lined up (as many as there are space for on a row)*/
-    .gallery {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
     .gallery img{
         width: 300px;
+        flex-direction: row;
     }
 }
 
@@ -73,7 +64,6 @@ header img {
     0% { opacity: 0; }
     100% { opacity: 1; }
 }
-
 
 #logo{
     /*The logo image in the header fades in over 3 seconds*/
