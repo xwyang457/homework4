@@ -21,8 +21,6 @@ header img {
 
 /*Navigation links should be centered and stacked*/
 .nav_links {
-    display: flex;
-    text-align: center;
     justify-content: center;
     flex-direction: column;
 }
@@ -36,6 +34,33 @@ header img {
 img{
     width: 100%;
     flex-wrap: wrap;
+}
+
+/*Media query at min-width: 700px*/
+@media screen and (min-width: 700px){
+    /*Header image is 400px width (auto height)*/
+    header img{
+        width: 400px;
+        height: auto;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .nav_links {
+        flex-direction: row;
+        align-items: flex-end;
+    }
+
+    /*Cards should be 300px wide, and be lined up (as many as there are space for on a row)*/
+    .card{
+        width: 300px;
+        flex-wrap: wrap;
+    }
+    /*Images should be 300px wide, and be lined up (as many as there are space for on a row)*/
+    .gallery img{
+        width: 300px;
+        flex-wrap: wrap;
+    }
 }
 
 @keyframes fadeIn {
@@ -54,41 +79,5 @@ img{
 @media screen and (prefers-reduced-motion) {
     #logo {
         animation: none;
-    }
-}
-
-
-/*Media query at min-width: 700px*/
-@media screen and (min-width: 700px){
-    /*Header image is 400px width (auto height)*/
-    header img{
-        width: 400px;
-        height: auto;
-        align-items: flex-start;
-    }
-
-    header{
-        justify-content: space-between;
-    }
-
-    .nav_links {
-        flex-direction: row;
-        align-items: flex-end;
-    }
-
-    /*card should be stacked*/
-    .pricing{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    /*Cards should be 300px wide, and be lined up (as many as there are space for on a row)*/
-    .card{
-        width: 300px;
-        justify-content: left;
-    }
-    /*Images should be 300px wide, and be lined up (as many as there are space for on a row)*/
-    .gallery img{
-        width: 300px;
     }
 }
