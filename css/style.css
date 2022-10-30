@@ -69,10 +69,6 @@ img{
         align-items: flex-start;
     }
 
-    header{
-        justify-content: space-between;
-    }
-
     .nav_links {
         flex-direction: row;
         align-items: flex-end;
