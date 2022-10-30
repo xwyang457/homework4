@@ -1,90 +1,72 @@
-/*Font Setting*/
-html, body{
-    font-family: "Poppins", sans-serif;
+html {
+font-family : 'Poppins', sans-serif;
 }
-
-header,
-.nav_links,
-.pricing,
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
+header {
+display : flex;
+flex-direction : column;
+align-items : center;
 }
-
 header img {
-    width: 100%;
-    height: auto;
+width : 100%;
+height : auto;
+}
+header #logo {
+animation : fades 3s linear forwards;
+}
+@keyframes fades {
+from {
+opacity : 0;
+}
+to {
+opacity : 1;
+}
 }
 
 .nav_links {
-    display: flex;
-    flex-direction: column;
+display : flex;
+flex-direction : column;
 }
 
-.card{
-    width: 100%;
+.pricing {
+display : flex;
+flex-direction : column;
+}
+.gallery {
+display : flex;
+flex-direction : column;
 }
 
-.gallery img{
-    width: 100%;
+@media all and (min-width: 700px) {
+header {
+flex-direction : row;
+justify-content : space-between;
 }
-
-/*Media query at min-width: 700px*/
-@media screen and (min-width: 700px){
-    /*Header image is 400px width (auto height)*/
-    header img{
-        width: 400px;
-        height: auto;
-    }
-
-    .nav_links {
-        flex-direction: row;
-    }
-
-    header {
-        flex-direction: row;
-        justify-content: space-between;
-
-    }
-
-    /*Cards should be 300px wide, and be lined up (as many as there are space for on a row)*/
-
-    .pricing {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .card{
-        width: 300px;
-    }
-    /*Images should be 300px wide, and be lined up (as many as there are space for on a row)*/
-    .gallery {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .gallery img{
-        width: 300px;
-    }
+header img {
+width : 400px;
+height : auto;
 }
-
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+.nav_links {
+flex-direction : row;
 }
-
-#logo{
-    /*The logo image in the header fades in over 3 seconds*/
-    animation: fadeIn 3s;
+.pricing {
+flex-direction : row;
+flex-wrap : wrap;
+justify-content : center;
 }
-
-/*If the user has set prefers reduced motion, the animation should not run*/
-@media screen and (prefers-reduced-motion) {
-    #logo {
-        animation: none;
-    }
+.card {
+width : 300px;
+}
+.gallery {
+flex-direction : row;
+flex-wrap : wrap;
+justify-content : center;
+}
+.gallery img {
+width : 300px;
+}
+}
+@media (prefers-reduced-motion) {
+header #logo {
+animation : none;
+}
 }
