@@ -1,71 +1,80 @@
-html, body {
-    font-family: 'Poppins', sans-serif;
+/*Font Setting*/
+html, body{
+    font-family: "Poppins", sans-serif;
 }
-header {
+
+header,
+.nav_links,
+.pricing,
+.gallery {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
 }
+
 header img {
     width: 100%;
     height: auto;
 }
 
 .nav_links {
-    display: flex;
     flex-direction: column;
 }
 
-.pricing {
-    display: flex;
-    flex-direction: column;
-}
-.gallery {
-    display: flex;
-    flex-direction: column;
-}
-.card, .gallery img {
-    width: 100%;
-}
-
-@media all and (min-width: 700px) {
-    header {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    header img {
+/*Media query at min-width: 700px*/
+@media screen and (min-width: 700px){
+    /*Header image is 400px width (auto height)*/
+    header img{
         width: 400px;
         height: auto;
     }
+
     .nav_links {
         flex-direction: row;
     }
+
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+
+    /*Cards should be 300px wide, and be lined up (as many as there are space for on a row)*/
+
     .pricing {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
     }
-    .card {
-        width : 300px;
+
+    .card{
+        width: 300px;
     }
+    /*Images should be 300px wide, and be lined up (as many as there are space for on a row)*/
     .gallery {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
     }
-    .gallery img {
-        width : 300px;
+
+    .gallery img{
+        width: 300px;
     }
 }
+
 @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
 }
 
+
 #logo{
+    /*The logo image in the header fades in over 3 seconds*/
     animation: fadeIn 3s;
 }
 
+
+/*If the user has set prefers reduced motion, the animation should not run*/
 @media screen and (prefers-reduced-motion) {
     #logo {
         animation: none;
