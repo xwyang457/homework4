@@ -10,7 +10,8 @@ header,
 .gallery {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 /*Header image should be full width (auto height)*/
@@ -39,7 +40,6 @@ header img {
     header img{
         width: 400px;
         height: auto;
-        justify-self: flex-start;
     }
 
     .nav_links {
@@ -47,19 +47,30 @@ header img {
     }
 
     header {
+        flex-direction: row;
         justify-content: space-between;
 
     }
 
     /*Cards should be 300px wide, and be lined up (as many as there are space for on a row)*/
+    .pricing {
+        flex-direction : row;
+        flex-wrap : wrap;
+        justify-content : center;
+        }
+
     .card{
         width: 300px;
-        flex-direction: row;
     }
     /*Images should be 300px wide, and be lined up (as many as there are space for on a row)*/
+    .gallery {
+        flex-direction : row;
+        flex-wrap : wrap;
+        justify-content : center;
+        }
+
     .gallery img{
         width: 300px;
-        flex-direction: row;
     }
 }
 
