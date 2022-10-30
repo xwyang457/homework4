@@ -3,39 +3,28 @@ html, body{
     font-family: "Poppins", sans-serif;
 }
 
-/* Header Section*/
-header {
+header,
+.nav_links,
+.pricing,
+.gallery {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
-    align-items : center;
+    justify-content: center;
 }
 
-/*Header Image Section*/
 header img {
     width: 100%;
     height: auto;
 }
 
-/*Navigation Section*/
 .nav_links {
     display: flex;
     flex-direction: column;
 }
 
-/*.Pricing Section*/
-.pricing {
-    display : flex;
-    flex-direction: column;
-}
-
 .card{
     width: 100%;
-}
-
-/*.Gallery Section*/
-.gallery {
-    display: flex;
-    flex-direction: column;
 }
 
 .gallery img{
@@ -88,12 +77,10 @@ header img {
     100% { opacity: 1; }
 }
 
-
 #logo{
     /*The logo image in the header fades in over 3 seconds*/
     animation: fadeIn 3s;
 }
-
 
 /*If the user has set prefers reduced motion, the animation should not run*/
 @media screen and (prefers-reduced-motion) {
