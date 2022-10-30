@@ -27,12 +27,10 @@ header img {
 /*Cards should be full width and stacked*/
 .card{
     width: 100%;
-    flex-wrap: wrap;
 }
 /*Images should be full width and stacked*/
 .gallery img{
     width: 100%;
-    flex-wrap: wrap;
 }
 
 /*Media query at min-width: 700px*/
