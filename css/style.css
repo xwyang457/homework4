@@ -48,7 +48,7 @@ header img {
 }
 
 /* Desktop View*/
-@media screen and (min-width: 700px){
+@media all and (min-width: 700px){
 
     header {
         justify-content: space-between;
@@ -73,7 +73,6 @@ header img {
         width: 300px;
         flex-direction: row;
     }
-
 }
 
 /* Animation Section*/
@@ -88,7 +87,7 @@ header img {
 }
 
 /*If the user has set prefers reduced motion, the animation should not run*/
-@media screen and (prefers-reduced-motion) {
+@media (prefers-reduced-motion) {
     #logo {
         animation: none;
     }
